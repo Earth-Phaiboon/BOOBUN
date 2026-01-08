@@ -25,7 +25,7 @@
 </div>
 
 <script>
-const LIFF_ID =  '2008726712-MxmzeBoq';//ใส่_LIFF_ID_ที่นี่
+const LIFF_ID =  '2008726712-MxmzeBoq';//ใส่_LIFF_ID_ที่นี่ 2008726712-MxmzeBoq
 const GAS_URL = 'https://script.google.com/macros/s/AKfycbwrxu_jzGHKcRSvT1yTQ1UV5dIi-4u_CQYeyZ88n5utOTel5g-EYTXzWnsJrOoBdiwhug/exec';//ใส่_GAS_URL_ที่นี่
 const OFFICE_LAT = 16.82227165633346; // ใส่ละติจูดบริษัท  , 
 const OFFICE_LNG = 100.26783761989458; // ใส่ลองจิจูดบริษัท
@@ -85,14 +85,14 @@ async function processAttendance(status) {
       const uLng = pos.coords.longitude;
       const distance = getDistance(uLat, uLng, OFFICE_LAT, OFFICE_LNG);
       const roundedDistance = Math.round(distance);
-          /*
+          
             // --- ตรวจสอบเงื่อนไขระยะทาง ---
             if (distance > ALLOWED_DISTANCE) {
                 msgEl.innerText = "นอกพื้นที่!";
                 alert(`❌ บันทึกไม่สำเร็จ!\nคุณอยู่ห่างจากบริษัท ${roundedDistance} เมตร\n(ต้องอยู่ในระยะไม่เกิน ${ALLOWED_DISTANCE} เมตร)`);
                 return; // หยุดการทำงานทันที ไม่ส่งข้อมูลไป GAS และไม่ส่ง Flex
             }
-            */
+            
       msgEl.innerText = "พิกัดถูกต้อง กำลังบันทึกข้อมูล...";
       const profile = await liff.getProfile();
       const context = liff.getContext();
@@ -275,6 +275,7 @@ main();
 </script>
 </body>
 </html>
+
 
 
 
