@@ -34,11 +34,8 @@ const ALLOWED_DISTANCE = 10; // อนุญาตในรัศมี 200 เ�
 async function main() {
   try {
     await liff.init({ liffId: LIFF_ID });
-// แทรกในส่วน main() หลังจาก liff.init
-const context = liff.getContext();
-if (context.type === 'group') {
-   alert("นี่คือ Group ID ของห้องนี้ครับ (จดไว้): " + context.groupId);
-}
+      
+   
 
     
     // ตรวจสอบว่ามี Token ที่ใช้งานได้จริงไหม
@@ -281,6 +278,7 @@ main();
 </script>
 </body>
 </html>
+
 
 
 
